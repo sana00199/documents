@@ -5,6 +5,28 @@
     padding: 0;
 }
 
+
+/* Styling for PDF viewing guidance on mobile */
+.mobile-pdf-guidance {
+    font-size: 0.9em;
+    color: #666; /* A slightly softer text color */
+    margin-top: 15px; /* Space from the iframe viewer */
+    margin-bottom: 10px; /* Space before the download button */
+    display: none; /* Hide by default, will show only on smaller screens via media query */
+}
+
+.mobile-pdf-guidance i {
+    margin-right: 5px;
+    color: var(--accent-color); /* Match accent color for the icon */
+}
+
+/* Show PDF guidance only on smaller screens (mobile) */
+@media (max-width: 768px) {
+    .mobile-pdf-guidance {
+        display: block; /* Show this guidance on screens 768px and smaller */
+    }
+}
+
 :root {
     /* Define your consistent color palette */
     --primary-color: #7A3F99; /* Deep Purple */

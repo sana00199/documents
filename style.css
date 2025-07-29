@@ -5,28 +5,6 @@
     padding: 0;
 }
 
-
-/* Styling for PDF viewing guidance on mobile */
-.mobile-pdf-guidance {
-    font-size: 0.9em;
-    color: #666; /* A slightly softer text color */
-    margin-top: 15px; /* Space from the iframe viewer */
-    margin-bottom: 10px; /* Space before the download button */
-    display: none; /* Hide by default, will show only on smaller screens via media query */
-}
-
-.mobile-pdf-guidance i {
-    margin-right: 5px;
-    color: var(--accent-color); /* Match accent color for the icon */
-}
-
-/* Show PDF guidance only on smaller screens (mobile) */
-@media (max-width: 768px) {
-    .mobile-pdf-guidance {
-        display: block; /* Show this guidance on screens 768px and smaller */
-    }
-}
-
 :root {
     /* Define your consistent color palette */
     --primary-color: #7A3F99; /* Deep Purple */
@@ -64,7 +42,7 @@ body {
 
 h1, h2, h3, h4 {
     font-family: 'Montserrat', sans-serif;
-    color: var(--dark-text);
+    color: var(--dark-text); /* Default heading color for light sections */
     line-height: 1.2;
 }
 /* Headings are light in dark sections */
@@ -106,7 +84,7 @@ ul li {
     font-size: 1.05em;
 }
 
-ul li::before {
+ul li::before { /* Default bullet point - hidden for nav and contact lists */
     content: "\2022";
     color: var(--accent-color);
     font-weight: bold;
@@ -133,13 +111,14 @@ p {
     max-width: 800px;
     margin: 0 auto 40px auto;
     line-height: 1.7;
+    text-align: center;
 }
 .content-section.dark-bg .section-description {
     color: rgba(255,255,255,0.9);
 }
 
 
-/* --- Header Styles (Common for all pages) --- */
+/* --- Header Styles --- */
 .main-header {
     background-color: var(--primary-color);
     color: var(--light-text);
@@ -167,6 +146,10 @@ p {
 
 .main-nav li {
     margin: 0 15px;
+}
+/* Hide default bullet for main navigation */
+.main-nav li::before {
+    display: none;
 }
 
 .main-nav a {
@@ -223,10 +206,9 @@ p {
     border-radius: 2px;
 }
 
-/* --- Documents Hero Section (Specific to documents.html) --- */
+/* --- Documents Hero Section --- */
 #documents-hero.hero-section {
     background: linear-gradient(to right, var(--documents-hero-gradient-start), var(--documents-hero-gradient-end));
-    color: var(--light-text); /* Ensure text is light */
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -235,11 +217,12 @@ p {
     padding: 100px 0;
 }
 
-#documents-hero .project-title { /* Using project-title as the main heading here */
+#documents-hero .project-title {
     color: var(--light-text);
 }
-#documents-hero .project-tagline { /* Using project-tagline as the sub-heading here */
+#documents-hero .project-tagline {
     color: var(--light-text);
+    opacity: 0.9;
 }
 
 /* Document Viewer (for embedding PDFs) */
@@ -262,16 +245,34 @@ p {
 /* Project Links / Call to Action (reused for download buttons) */
 .project-links {
     text-align: center;
-    margin-top: 20px; /* Adjust spacing as needed after document viewer */
-    margin-bottom: 40px; /* Space before next section */
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+/* Styling for PDF viewing guidance on mobile */
+.mobile-pdf-guidance {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    display: none; /* Hide by default, will show only on smaller screens via media query */
+}
+
+.mobile-pdf-guidance i {
+    margin-right: 5px;
+    color: var(--accent-color);
 }
 
 
-/* --- Key Links & Contact Section (Specific to documents.html) --- */
+/* --- Key Links & Contact Section --- */
 #key-links-contact .contact-list {
     text-align: center;
     padding: 0;
     margin-top: 30px;
+}
+/* Hide default bullet for contact list items */
+#key-links-contact .contact-list li::before {
+    display: none;
 }
 
 #key-links-contact .contact-list li {
@@ -300,14 +301,14 @@ p {
 }
 
 
-/* --- Footer Styles (Common for all pages) --- */
+/* --- Footer Styles --- */
 .main-footer {
     background-color: var(--primary-color);
     color: var(--light-text);
     text-align: center;
     padding: 20px 0;
     font-size: 0.9em;
-    margin-top: 80px; /* Space from last section */
+    margin-top: 80px;
 }
 
 /* --- General Button & Link Styles (Common for all pages) --- */
@@ -352,7 +353,7 @@ p {
     margin-right: 8px;
 }
 
-/* --- Responsive Design (Common for all pages) --- */
+/* --- Responsive Design --- */
 @media (max-width: 992px) {
     .section-heading, .section-heading-hero, #documents-hero .project-title {
         font-size: 2.2em;
@@ -361,9 +362,8 @@ p {
         width: 150px;
         height: 150px;
     }
-    /* Responsive iframe for documents */
     .document-viewer {
-        height: 500px; /* Adjust height for smaller screens */
+        height: 500px;
     }
 }
 
@@ -387,39 +387,18 @@ p {
     .project-tagline {
         font-size: 1.2em;
     }
-    .project-main-screenshot {
-        max-width: 80%;
-    }
-    .project-hero-logo {
-        max-width: 180px;
-    }
     p, .section-description {
         font-size: 1em;
     }
     ul li {
         font-size: 0.95em;
     }
-    .projects-overview-cards, .projects-list-grid, .skills-grid, .problem-solution-grid, .tech-grid, .concept-list, .video-gallery, .challenge-learning-grid, .rationale-grid {
-        grid-template-columns: 1fr;
+    .document-viewer {
+        height: 400px;
+        margin: 20px auto;
     }
-    .tech-item, .problem-solution-item, .challenge-item, .concept-list li, .skill-category-item, .project-list-card, .rationale-item {
-        padding: 20px;
-    }
-    .button-link {
-        padding: 12px 25px;
-        font-size: 1em;
-    }
-    .button-link-small {
-        padding: 8px 15px;
-        font-size: 0.9em;
-    }
-    .contact-list li {
-        flex-direction: column;
-        margin-bottom: 20px;
-    }
-    .contact-list li i {
-        margin-right: 0;
-        margin-bottom: 5px;
+    .mobile-pdf-guidance {
+        display: block; /* Show this guidance on screens 768px and smaller */
     }
 }
 

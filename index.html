@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sana Mehboob | Professional Documents</title>
-    <base href="https://sana00199.github.io/documents/">
+    <!-- IMPORTANT: Base URL for Project Pages -->
+    <!-- This tells the browser that all relative paths (like 'documents/sana-mehboob-cv.pdf')
+         should be resolved from 'https://sana00199.github.io/documents/' -->
+    <base href="https://sana00199.github.io/documents/"> <!-- MAKE SURE 'sana00199' IS YOUR ACTUAL GITHUB USERNAME -->
+
     <!-- Link to your DEDICATED CSS file for this documents site -->
     <link rel="stylesheet" href="style.css">
     <!-- Google Fonts for a professional look -->
@@ -22,7 +26,7 @@
             <p class="site-tagline">Professional Application Documents</p>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="https://sana00199.github.io/">Main Portfolio</a></li> <!-- Link back to your main portfolio -->
+                    <li><a href="https://sana00199.github.io/" target="_blank">Main Portfolio</a></li> <!-- Link back to your main portfolio -->
                     <li><a href="#cv-section">CV</a></li>
                     <li><a href="#cover-letter-section">Cover Letter</a></li>
                     <li><a href="#key-links-contact">Contact Info</a></li>
@@ -48,17 +52,17 @@
                 <h3 class="section-heading">Curriculum Vitae (CV)</h3>
                 <p class="section-description">A detailed overview of my academic background, technical skills, and practical experience in mobile application development.</p>
                 <div class="document-viewer">
-                    <!-- EMBED YOUR CV PDF HERE -->
-                    <iframe src="documents/SANA MEHBOOB CV.pdf" frameborder="0" title="Sana Mehboob CV"></iframe>
+                    <!-- EMBED YOUR CV PDF HERE - USING RECOMMENDED FILENAME -->
+                    <iframe src="documents/CV SANA MEHBOOB.pdf" frameborder="0" title="Sana Mehboob CV"></iframe>
                 </div>
 
-                <!-- NEW: Add guidance for mobile users -->
+                <!-- Guidance for mobile users -->
                 <p class="text-center mobile-pdf-guidance">
                     <i class="fas fa-info-circle"></i> On mobile, PDFs may download directly or require an external viewer. Please use the "Download PDF" button below for optimal viewing.
                 </p>
 
                 <p class="text-center project-links">
-                    <a href="documents/SANA MEHBOOB CV.pdf" target="_blank" class="button-link">
+                    <a href="documents/CV SANA MEHBOOB.pdf" target="_blank" class="button-link">
                         <i class="fas fa-download"></i> Download CV (PDF)
                     </a>
                 </p>
@@ -71,16 +75,14 @@
                 <h3 class="section-heading">Cover Letter</h3>
                 <p class="section-description">A personalized introduction highlighting my interest in mobile application development and how my skills align with industry needs.</p>
                 <div class="document-viewer">
-                    <!-- EMBED YOUR COVER LETTER PDF HERE -->
+                    <!-- EMBED YOUR COVER LETTER PDF HERE - USING RECOMMENDED FILENAME -->
                     <iframe src="documents/Sana Mehboob CoverLetter.pdf" frameborder="0" title="Sana Mehboob Cover Letter"></iframe>
                 </div>
 
-                <!-- NEW: Add guidance for mobile users -->
+                <!-- Guidance for mobile users -->
                 <p class="text-center mobile-pdf-guidance">
                     <i class="fas fa-info-circle"></i> On mobile, PDFs may download directly or require an external viewer. Please use the "Download PDF" button below for optimal viewing.
                 </p>
-                <!-- END NEW -->
-
 
                 <p class="text-center project-links">
                     <a href="documents/Sana Mehboob CoverLetter.pdf" target="_blank" class="button-link">
@@ -91,24 +93,25 @@
         </section>
 
         <!-- Other Documents Section (Example: Academic Results) -->
-        <section id="other-documents-section" class="content-section light-bg">
+       <section id="other-documents-section" class="content-section light-bg">
             <div class="container">
                 <h3 class="section-heading">Academic Results</h3>
-                <p class="section-description">My academic transcript showcasing my performance and dedication throughout my BSIT program.</p>
-                <div class="document-viewer">
-                    <!-- EMBED YOUR ACADEMIC RESULTS PDF HERE -->
-                    <iframe src="documents/SANAMEHBOOB_7THRESULT.pdf" frameborder="0" title="Sana Mehboob Academic Results"></iframe>
+                <p class="section-description">My academic transcript showcasing my performance and dedication throughout my BSIT program. You can view the image below.</p>
+                <!-- NEW: Div for image viewer -->
+                <div class="document-image-viewer">
+                    <!-- EMBED YOUR ACADEMIC RESULTS IMAGE HERE -->
+                    <img src="documents/sana-mehboob-7th-result.jpg" alt="Sana Mehboob Academic Results Transcript" class="document-image">
                 </div>
-<p class="text-center mobile-pdf-guidance">
-                    <i class="fas fa-info-circle"></i> On mobile, PDFs may download directly or require an external viewer. Please use the "Download PDF" button below for optimal viewing.
+
+                <!-- NEW: Guidance for mobile users (specific for images) -->
+                <p class="text-center mobile-image-guidance">
+                    <i class="fas fa-info-circle"></i> On mobile, for optimal viewing, you may need to zoom in on the image or download it using the button below.
                 </p>
                 <!-- END NEW -->
 
-                
-
                 <p class="text-center project-links">
-                    <a href="documents/SANAMEHBOOB_7THRESULT.pdf" target="_blank" class="button-link">
-                        <i class="fas fa-download"></i> Download Academic Results (PDF)
+                    <a href="documents/sana-mehboob-7th-result.jpg" target="_blank" class="button-link">
+                        <i class="fas fa-download"></i> Download Academic Results (JPG)
                     </a>
                 </p>
             </div>
